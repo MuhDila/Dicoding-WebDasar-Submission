@@ -4,15 +4,46 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'SUSE', sans-serif;
-    height: 100vh;
     margin: 0;
     display: flex;
     flex-direction: column;
     color: #111522;
+    background-image: url('../img/img-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#navbar-menu.active {
+    display: block;
+}
+
+#close-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar-container.active .navbar-logo {
+    display: none;
+}
+
+.navbar-container.active #menu-icon {
+    display: none;
+}
+
+.navbar-container.active #close-icon {
+    display: block;
+    color: white;
+}
+
+.navbar-container.active #close-icon {
+    font-size: 24px;
 }
 
 header.navbar-container {
@@ -22,27 +53,31 @@ header.navbar-container {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    border-radius: 8px;
-    background-color: #f1efe6;
-    padding: 6px 6px;
-    margin-top: 8px;
+    border-radius: 16px;
+    background-color: #111522;
+    padding: 12px 12px;
+    position: sticky;
+    top: 16px;
+    box-shadow: 2px 4px 8px 2px;
 }
 
 header .navbar-logo {
     display: flex;
     align-items: center;
-    margin-right: 32px;
+    margin-right: 120px;
     transition: all 0.2s ease-in-out;
 }
 
 header .navbar-logo .ti-brand-nytimes {
-    font-size: 16px;
+    font-size: 32px;
+    color: white;
 }
 
 header .navbar-logo p {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 24px;
     margin: 0;
+    color: white;
 }
 
 header .navbar-list ul {
@@ -55,13 +90,13 @@ header .navbar-list ul {
 
 header .navbar-list ul li {
     list-style: none;
-    font-size: 10px;
+    font-size: 18px;
 }
 
 header .navbar-list ul li a {
     text-decoration: none;
-    color: #111522;
     transition: all 0.2s ease-in-out;
+    color: white;
 }
 
 header .navbar-list ul li a:hover {
@@ -70,15 +105,15 @@ header .navbar-list ul li a:hover {
 }
 
 header button {
-    padding: 2px;
-    border: 3px solid transparent;
-    border-radius: 6px;
-    background-color: #111522;
+    padding: 8px 16px;
+    border: 0 solid transparent;
+    border-radius: 14px;
+    background-color: white;
     font-family: 'SUSE', sans-serif;
-    color: white;
+    color: #111522;
     cursor: pointer;
-    margin-left: 32px;
-    font-size: 10px;
+    margin-left: 120px;
+    font-size: 18px;
     transition: all 0.15s ease-in;
 }
 
@@ -89,7 +124,14 @@ header button:hover {
 
 header .ti-menu-2 {
     display: none;
+    cursor: pointer;
+    font-size: 32px;
     transition: all 0.15s ease-in;
+    color: white;
+}
+
+header .ti-menu-2:hover {
+    font-weight: 600;
 }
 
 main {
@@ -100,41 +142,260 @@ main {
     margin-inline: auto;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
-main .content .content-title {
-    max-width: 400px;
+main .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+main .content .content-home {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    height: 100vh;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     color: #111522;
+    margin: auto;
     transition: all 0.2s ease-in-out;
 }
 
-main .content .content-title p {
-    margin: 12px 0;
-    font-size: 12px;
-    font-weight: 450;
+main .content .content-home h1 {
+    font-size: 64px;
 }
 
-main .content .content-title button {
-    padding: 4px;
-    border: 3px solid transparent;
-    border-radius: 6px;
+main .content .content-home p {
+    margin: 24px 0;
+    font-weight: 450;
+    font-size: 24px;
+}
+
+main .content .content-home button {
+    padding: 8px 16px;
+    border: 0 solid transparent;
+    border-radius: 14px;
     background-color: #111522;
     font-family: 'SUSE', sans-serif;
     color: white;
     cursor: pointer;
-    font-size: 10px;
+    font-size: 24px;
 }
 
-main .content .content-title button:hover {
+main .content .content-home button:hover {
     font-weight: 600;
     text-decoration: underline;
 }
 
-@media screen and (max-width: 450px) {
+main .content .content-about {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    color: #111522;
+    margin: auto;
+    transition: all 0.2s ease-in-out;
+}
+
+main .content .content-about .content-about-symbol {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 2px 4px 8px 2px;
+    border-radius: 16px;
+    padding: 8px;
+}
+
+main .content .content-about .content-about-symbol p {
+    font-size: 14px;
+}
+
+main .content .content-about > p {
+    font-weight: 500;
+}
+
+main .content .content-about .content-about-description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: justify;
+    box-shadow: 2px 4px 8px 2px;
+    border-radius: 16px;
+    padding: 0 32px;
+}
+
+main .content .content-about h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+main .content .content-about p {
+    font-size: 18px;
+}
+
+main .content .content-about img {
+    width: 45%;
+}
+
+main .content .content-blog {
+    display: flex;
+    flex-direction: column;
+    height: 110vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    color: #111522;
+    margin: auto;
+    transition: all 0.2s ease-in-out;
+}
+
+main .content .content-blog .content-blog-symbol {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 2px 4px 8px 2px;
+    border-radius: 16px;
+    padding: 8px;
+}
+
+main .content .content-blog .content-about-symbol p {
+    font-size: 14px;
+}
+
+main .content .content-blog > p {
+    font-weight: 500;
+}
+
+main .content .content-blog .content-blog-description {
+    width: 96%;
+    display: flex;
+    gap: 24px;
+}
+
+main .content .content-blog .content-blog-first {
+    box-shadow: 2px 4px 8px 2px;
+    border-radius: 16px;
+}
+
+main .content .content-blog .content-blog-first img {
+    width: 50%;
+}
+
+main .content .content-blog .text {
+    padding: 16px 16px;
+    text-align: justify;
+}
+
+main .content .content-blog .content-blog-second {
+    box-shadow: 2px 4px 8px 2px;
+    border-radius: 16px;
+}
+
+main .content .content-blog .content-blog-second img {
+    width: 50%;
+}
+
+main .content .content-blog .content-blog-third {
+    box-shadow: 2px 4px 8px 2px;
+    border-radius: 16px;
+}
+
+main .content .content-blog .content-blog-third img {
+    width: 50%;
+}
+
+main aside {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-end: 0;
+}
+
+main aside .social-media {
+    height: 100%;
+    display: flex;
+}
+
+main aside .social-media ul {
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+    margin: auto 8px;
+    box-shadow: 2px 4px 8px 2px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+main aside .social-media li {
+    list-style-type: none;
+}
+
+main aside .social-media li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    transition: all 0.1s ease-in-out;
+}
+
+main aside .social-media li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    background-color: #111522;
+    border-radius: 16px 16px 0 0;
+    text-align: center;
+}
+
+footer .footer-logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+    font-size: 24px;
+    margin: 0;
+}
+
+footer .footer-logo .ti-brand-nytimes {
+    font-size: 32px;
+}
+
+footer img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #f1efe6;
+}
+
+footer p {
+    color: white;
+}
+
+@media screen and (max-width: 936px) {
+
+    header.navbar-container {
+        justify-content: space-between;
+        width: 96%;
+    }
 
     header .navbar-logo {
-        margin-right: 32px;
+        margin-right: 120px;
     }
 
     header button {
@@ -144,11 +405,31 @@ main .content .content-title button:hover {
 
     header .ti-menu-2 {
         display: flex;
-        margin-left: 32px;
+        margin-left: 120px;
+    }
+
+    main .content .content-about {
+        max-width: 100%;
+    }
+
+    main .content-about .content-about-description {
+        width: 96%;
+    }
+
+    main .content-about .content-about-description-text {
+        padding: 32px 0;
+    }
+
+    main .content-blog .content-blog-description {
+        width: 96%;
+    }
+
+    main .content-blog .content-blog-description .text h3 {
+        text-align: left;
     }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 800px) {
 
     header.navbar-container {
         justify-content: space-between;
@@ -172,21 +453,84 @@ main .content .content-title button:hover {
         display: flex;
     }
 
-    main .content .content-title {
+    main .content .content-home {
         padding: 0 4px;
     }
 
-    main .content .content-title h1 {
-        font-size: 20px;
+    main .content .content-home h1 {
+        font-size: 34px;
     }
 
-    main .content .content-title p {
-        font-size: 10px;
-        margin: 8px 0;
+    main .content .content-home p {
+        font-size: 16px;
+        margin: 16px 0;
     }
 
-    main .content .content-title button {
-        padding: 2px;
-        font-size: 8px;
+    main .content .content-home button {
+        font-size: 16px;
+    }
+
+    main .content .content-about {
+        margin-top: 8px;
+    }
+
+    main .content .content-about > p {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    main .content .content-about h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    main .content .content-about p {
+        font-size: 16px;
+    }
+
+    main .content .content-about .content-about-description{
+        flex-direction: column;
+    }
+
+    main .content .content-about .content-about-description img{
+        order: -1;
+        width: 160px;
+    }
+
+    main .content .content-blog {
+        height: auto;
+        margin: 68px 0;
+    }
+
+    main .content .content-blog .content-blog-description {
+        flex-direction: column;
+    }
+
+    main .content .content-blog .content-blog-description img {
+        width: 160px;
+    }
+
+    main .content .content-blog .content-blog-description h3 {
+        font-size: 18px;
+    }
+
+    main .content .content-blog .content-blog-description p {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    footer .footer-logo {
+        font-size: 18px;
+    }
+
+    footer .footer-logo .ti-brand-nytimes {
+        font-size: 18px;
+    }
+
+    footer img {
+        width: 50px;
     }
 }
