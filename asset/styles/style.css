@@ -287,6 +287,14 @@ main .content .content-blog .content-blog-first {
     border-radius: 16px;
 }
 
+main .content .content-blog .content-blog-first:hover {
+    cursor: pointer;
+    margin-left: 4px;
+    box-shadow: 4px 4px 8px 4px rgba(1, 1, 1, 2);
+    border-radius: 16px;
+    color: white;
+}
+
 main .content .content-blog .content-blog-first img {
     width: 50%;
 }
@@ -301,6 +309,14 @@ main .content .content-blog .content-blog-second {
     border-radius: 16px;
 }
 
+main .content .content-blog .content-blog-second:hover {
+    cursor: pointer;
+    margin-left: 4px;
+    box-shadow: 4px 4px 8px 4px rgba(1, 1, 1, 2);
+    border-radius: 16px;
+    color: white;
+}
+
 main .content .content-blog .content-blog-second img {
     width: 50%;
 }
@@ -308,6 +324,14 @@ main .content .content-blog .content-blog-second img {
 main .content .content-blog .content-blog-third {
     box-shadow: 2px 4px 8px 2px;
     border-radius: 16px;
+}
+
+main .content .content-blog .content-blog-third:hover {
+    cursor: pointer;
+    margin-left: 4px;
+    box-shadow: 4px 4px 8px 4px rgba(1, 1, 1, 2);
+    border-radius: 16px;
+    color: white;
 }
 
 main .content .content-blog .content-blog-third img {
@@ -387,6 +411,46 @@ footer p {
     color: white;
 }
 
+/* First Blog*/
+header.navbar-container-blog {
+    display: flex;
+    max-width: 1200px;
+    margin-inline: auto;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    border-radius: 16px;
+    background-color: #111522;
+    padding: 12px 12px;
+    position: sticky;
+    top: 16px;
+    box-shadow: 2px 4px 8px 2px;
+}
+
+header .navbar-list-blog ul {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    padding-left: 0;
+    justify-content: space-between;
+}
+
+header .navbar-list-blog ul li {
+    list-style: none;
+    font-size: 18px;
+}
+
+header .navbar-list-blog ul li a {
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    color: white;
+}
+
+header .navbar-list-blog ul li a:hover {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 936px) {
 
     header.navbar-container {
@@ -433,6 +497,11 @@ footer p {
 
     header.navbar-container {
         justify-content: space-between;
+        width: 96%;
+    }
+
+    header.navbar-container-blog {
+        justify-content: center;
         width: 96%;
     }
 
