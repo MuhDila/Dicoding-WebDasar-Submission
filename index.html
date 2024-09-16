@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Gatau Bingung</title>
     <link rel="icon" type="image/png" href="asset/img/icon.svg" sizes="32x32">
 
@@ -17,46 +18,40 @@
     <!--  Tabler Icon  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>
 </head>
+
 <body>
-    <header class="navbar-container">
-        <div class="navbar-logo">
-            <i class="ti ti-brand-nytimes"></i>
-            <p>atau Bingung</p>
-        </div>
-        <nav class="navbar-list" id="navbar-menu">
+    <header id="home">
+        <nav class="header-nav">
+            <img class="icon-logo" src="asset/img/icon-nav.svg" alt="Icon Navigation">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#blog">Blog</a></li>
-                <li><a href="#footer">Footer</a></li>
             </ul>
+            <a class="header-button" href="#about">What is this?</a>
+            <img class="icon-menu" src="asset/img/icon-menu.svg" alt="Icon Menu">
+            <img class="icon-close" src="asset/img/icon-close.svg" alt="Icon Close">
         </nav>
-        <a href="#about">
-            <button class="download-button">What is this?</button>
-        </a>
-        <i id="menu-icon" class="ti ti-menu-2"></i>
-        <i id="close-icon" class="ti ti-x"></i>
+        <article class="header-intro">
+            <h1>Embrace the Journey of Confusion and Uncertainty</h1>
+            <p>A space dedicated to the moments of uncertainty, where confusion leads to curiosity and exploration.</p>
+            <a class="header-intro-button" href="#about">Get Started</a>
+        </article>
     </header>
 
     <main>
-        <div class="content">
-            <article class="content-home" id="home">
-                <h1>Embrace the Journey of Confusion and Uncertainty</h1>
-                <p>A space dedicated to the moments of uncertainty, where confusion leads to curiosity and
-                    exploration.</p>
-                <a href="#about">
-                    <button class="content-home-button">Get Started</button>
-                </a>
-            </article>
-            <article class="content-about" id="about">
-                <div class="content-about-symbol">
-                    <i class="ti ti-info-square-rounded"></i>
-                    <p>About Us</p>
-                </div>
-                <p>Through Uncertainty and Discovery</p>
-                <div class="content-about-description">
-                    <div class="content-about-description-text">
-                        <h1>What is Gatau Bingung?</h1>
+        <div class="main-content">
+            <article id="about">
+                <header>
+                    <div>
+                        <img src="asset/img/icon-info.svg" alt="About Us">
+                        <p>About Us</p>
+                    </div>
+                    <h1>Through Uncertainty and Discovery</h1>
+                </header>
+                <section>
+                    <div>
+                        <h2>What is Gatau Bingung?</h2>
                         <p>At Gatau Bingung, we explore the beauty of uncertainty and confusion. This space was created
                             to
                             embrace moments of doubt, where not having all the answers leads to discovery and growth. We
@@ -66,92 +61,121 @@
                             question
                             is an opportunity to learn and explore.</p>
                     </div>
-                    <img src="asset/img/img-about.png" alt="About">
-                </div>
+                    <img src="asset/img/img-about.png" alt="About" width="250">
+                </section>
+                <footer>
+                    <p><strong>Our Mission:</strong> At Gatau Bingung, we strive to turn the confusion of life into a
+                        source of creativity and growth. We believe that embracing uncertainty opens doors to new
+                        possibilities and deeper understanding. Our mission is to encourage a mindset that welcomes
+                        questions and exploration as key drivers of personal and collective development.</p>
+                </footer>
             </article>
-            <article class="content-blog" id="blog">
-                <div class="content-blog-symbol">
-                    <i class="ti ti-pencil-heart"></i>
-                    <p>Blog Uncertaintyl</p>
-                </div>
-                <p>The Blog of Uncertainty: Insights from Gatau Bingung</p>
-                <div class="content-blog-description">
-                    <div class="content-blog-first" onclick="window.location.href='blog.html'">
-                        <img src="asset/img/img-blog1.png" alt="First Blog">
-                        <div class="text">
-                            <h3>The Power of Not Knowing: How Uncertainty Drives Growth</h3>
-                            <br>
+            <article id="blog">
+                <header>
+                    <div>
+                        <img src="asset/img/icon-blog.svg" alt="About Us">
+                        <p>Bingung Blog</p>
+                    </div>
+                    <h1>Bingung Blog Uncertainty</h1>
+                </header>
+                <div class="blog-section">
+                    <section>
+                        <img src="asset/img/img-blog1.png" alt="About" width="180">
+                        <div>
+                            <h2>The Power of Unknowing</h2>
                             <p>In this article, we explore how moments of uncertainty are not something to be feared
                                 but
                                 embraced. Discover how confusion can spark creativity, challenge assumptions, and
                                 push.</p>
                         </div>
-                    </div>
-                    <div class="content-blog-second" onclick="window.location.href='blog.html'">
-                        <img src="asset/img/img-blog2.png" alt="First Second">
-                        <div class="text">
-                            <h3>Navigating Life's Complexities: Turning Doubt into Curiosity</h3>
-                            <br>
+                    </section>
+                    <section>
+                        <img src="asset/img/img-blog2.png" alt="About" width="180">
+                        <div>
+                            <h2>Navigating Complexities</h2>
                             <p>Life is full of unknowns, and navigating these complexities can be overwhelming. In this
                                 post, we explore how transforming doubt into curiosity can lead to self-discovery and
                                 new perspectives.</p>
                         </div>
-                    </div>
-                    <div class="content-blog-third" onclick="window.location.href='blog.html'">
-                        <img src="asset/img/img-blog3.png" alt="First Third">
-                        <div class="text">
-                            <h3>The Art of Embracing Ambiguity: Why Confusion Isn't a Bad Thing</h3>
-                            <br>
+                    </section>
+                    <section>
+                        <img src="asset/img/img-blog3.png" alt="About" width="180">
+                        <div>
+                            <h2>The Art of Ambiguity</h2>
                             <p>Ambiguity often gets a bad reputation, but in this article, we look at why confusion
-                                isn't necessarily a negative experience. We'll examine how embracing ambiguity can
-                                foster resilience</p>
+                                isn't necessarily a negative experience. We'll examine how embracing ambiguity.</p>
                         </div>
-                    </div>
+                    </section>
                 </div>
+                <footer>
+                    <p><strong>Additional Insights:</strong> Our blog delves into various aspects of uncertainty and how
+                        it can be a powerful force for personal and professional growth. Each post offers a unique
+                        perspective on handling doubt, embracing ambiguity, and using confusion as a catalyst for
+                        creativity and problem-solving.</p>
+                </footer>
             </article>
         </div>
-
-        <aside>
+        <aside id="aside">
+            <section>
+                <img src="asset/img/img_profile.png" alt="Profile" width="250">
+                <p>Muhammad Dila is a passionate creator with a deep love for technology and design. With a background
+                    in Information Engineering, Muhammad has dedicated his career to crafting innovative
+                    solutions and engaging experiences.</p>
+            </section>
             <div class="social-media">
                 <ul>
-                    <li><a href="https://github.com/MuhDila/" target="_blank"><i class="ti ti-brand-github"></i></a>
+                    <li>
+                        <a href="https://github.com/MuhDila/">
+                            <img src="asset/img/icon-github.svg" alt="Github">
+                        </a>
                     </li>
-                    <li><a href="https://www.instagram.com/muhdilaa/" target="_blank"><i
-                            class="ti ti-brand-instagram"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/muhammaddila/" target="_blank"><i
-                            class="ti ti-brand-linkedin"></i></a></li>
+                    <li>
+                        <a href="https://www.instagram.com/muhdilaa/">
+                            <img src="asset/img/icon-instagram.svg" alt="Instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/muhammaddila/">
+                            <img src="asset/img/icon-linkendin.svg" alt="LinkedIn">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </aside>
+
     </main>
 
-    <footer id="footer">
-        <img src="asset/img/img_profile.png" alt="Profile">
-        <div class="footer-logo">
-            <i class="ti ti-brand-nytimes"></i>
-            <p>atau Bingung</p>
-        </div>
+    <footer class="footer-content">
+        <img src="asset/img/icon-nav.svg" alt="Icon">
         <p>Create by Muhammad Dila, Dila was "Bingung" what he need to create, so Dila create "Gatau Bingung" so here
             "Gatau Bingung" website.</p>
         <p>Belajar Dasar Pemograman Web &#169; 2024, Dicoding Academy</p>
     </footer>
+
+    <!-- JavaScript code -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const iconLogo = document.querySelector('.icon-logo');
+            const iconMenu = document.querySelector('.icon-menu');
+            const iconClose = document.querySelector('.icon-close');
+            const headerNav = document.querySelector('header#home nav ul');
+
+            iconMenu.addEventListener('click', function() {
+                iconLogo.classList.add('hidden');
+                iconMenu.classList.add('hidden');
+                iconClose.classList.add('show');
+                headerNav.classList.add('show');
+            });
+
+            iconClose.addEventListener('click', function() {
+                iconLogo.classList.remove('hidden');
+                iconMenu.classList.remove('hidden');
+                iconClose.classList.remove('show');
+                headerNav.classList.remove('show');
+            });
+        });
+
+    </script>
 </body>
-
-<script>
-    const menuIcon = document.getElementById('menu-icon');
-    const closeIcon = document.getElementById('close-icon');
-    const navbarMenu = document.getElementById('navbar-menu');
-    const navbarContainer = document.querySelector('.navbar-container');
-
-    menuIcon.addEventListener('click', () => {
-        navbarMenu.classList.add('active');
-        navbarContainer.classList.add('active');
-    });
-
-    closeIcon.addEventListener('click', () => {
-        navbarMenu.classList.remove('active');
-        navbarContainer.classList.remove('active');
-    });
-</script>
 
 </html>

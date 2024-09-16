@@ -1,18 +1,15 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    font-family: 'SUSE', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 body {
-    font-family: 'SUSE', sans-serif;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    color: #111522;
     background-image: url('../img/img-background.png');
     background-size: cover;
     background-position: center;
@@ -20,586 +17,371 @@ body {
     background-attachment: fixed;
 }
 
-#navbar-menu.active {
-    display: block;
-}
-
-#close-icon {
-    display: none;
-    cursor: pointer;
-}
-
-.navbar-container.active .navbar-logo {
-    display: none;
-}
-
-.navbar-container.active #menu-icon {
-    display: none;
-}
-
-.navbar-container.active #close-icon {
-    display: block;
-    color: white;
-}
-
-.navbar-container.active #close-icon {
-    font-size: 24px;
-}
-
-header.navbar-container {
+header#home {
     display: flex;
-    max-width: 1200px;
-    margin-inline: auto;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
-    border-radius: 16px;
-    background-color: #111522;
-    padding: 12px 12px;
-    position: sticky;
+    height: 100vh;
+}
+
+header#home nav {
+    display: flex;
+    position: fixed;
     top: 16px;
-    box-shadow: 2px 4px 8px 2px;
-}
-
-header .navbar-logo {
-    display: flex;
-    align-items: center;
-    margin-right: 120px;
-    transition: all 0.2s ease-in-out;
-}
-
-header .navbar-logo .ti-brand-nytimes {
-    font-size: 32px;
-    color: white;
-}
-
-header .navbar-logo p {
-    font-weight: 500;
-    font-size: 24px;
-    margin: 0;
-    color: white;
-}
-
-header .navbar-list ul {
-    margin: 0;
-    display: flex;
-    gap: 16px;
-    padding-left: 0;
+    z-index: 9999;
+    padding: 8px;
+    border-radius: 16px;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 64px;
+    background-color: black;
 }
 
-header .navbar-list ul li {
-    list-style: none;
-    font-size: 18px;
+header#home ul {
+    display: flex;
+    gap: 18px;
 }
 
-header .navbar-list ul li a {
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
+header#home a {
     color: white;
 }
 
-header .navbar-list ul li a:hover {
+header#home a:hover {
     font-weight: 600;
     text-decoration: underline;
 }
 
-header button {
-    padding: 8px 16px;
-    border: 0 solid transparent;
-    border-radius: 14px;
+header#home .header-button {
+    color: black;
     background-color: white;
-    font-family: 'SUSE', sans-serif;
-    color: #111522;
-    cursor: pointer;
-    margin-left: 120px;
-    font-size: 18px;
-    transition: all 0.15s ease-in;
+    padding: 6px;
+    border-radius: 12px;
 }
 
-header button:hover {
-    font-weight: 600;
-    text-decoration: underline;
-}
-
-header .ti-menu-2 {
+header#home nav img.icon-menu,
+header#home nav img.icon-close {
     display: none;
-    cursor: pointer;
-    font-size: 32px;
-    transition: all 0.15s ease-in;
-    color: white;
 }
 
-header .ti-menu-2:hover {
-    font-weight: 600;
+header#home .header-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    max-width: 1000px;
+}
+
+header#home .header-intro h1 {
+    font-size: 64px;
+}
+
+header#home .header-intro p {
+    font-size: 24px;
+    max-width: 800px;
+}
+
+header#home .header-intro a {
+    font-size: 18px;
+}
+
+header#home .header-intro-button {
+    color: white;
+    background-color: black;
+    padding: 12px;
+    border-radius: 16px;
 }
 
 main {
     display: flex;
-    flex: 1;
-    width: 100%;
-    max-width: 1200px;
     margin-inline: auto;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-main .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-main .content .content-home {
-    display: flex;
-    flex-direction: column;
-    max-width: 800px;
-    height: 100vh;
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    color: #111522;
-    margin: auto;
-    transition: all 0.2s ease-in-out;
+    max-width: 95%;
 }
 
-main .content .content-home h1 {
-    font-size: 64px;
-}
-
-main .content .content-home p {
-    margin: 24px 0;
-    font-weight: 450;
-    font-size: 24px;
-}
-
-main .content .content-home button {
-    padding: 8px 16px;
-    border: 0 solid transparent;
-    border-radius: 14px;
-    background-color: #111522;
-    font-family: 'SUSE', sans-serif;
-    color: white;
-    cursor: pointer;
-    font-size: 24px;
-}
-
-main .content .content-home button:hover {
-    font-weight: 600;
-    text-decoration: underline;
-}
-
-main .content .content-about {
-    display: flex;
-    flex-direction: column;
-    max-width: 800px;
-    height: 100vh;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    color: #111522;
-    margin: auto;
-    transition: all 0.2s ease-in-out;
-}
-
-main .content .content-about .content-about-symbol {
-    display: flex;
-    align-items: center;
+header div {
+    display: inline-flex;
     gap: 8px;
-    box-shadow: 2px 4px 8px 2px;
-    border-radius: 16px;
-    padding: 8px;
-}
-
-main .content .content-about .content-about-symbol p {
-    font-size: 14px;
-}
-
-main .content .content-about > p {
     font-weight: 500;
-}
-
-main .content .content-about .content-about-description {
-    display: flex;
-    flex-direction: row;
+    margin: 0 auto;
     align-items: center;
-    text-align: justify;
-    box-shadow: 2px 4px 8px 2px;
-    border-radius: 16px;
-    padding: 0 32px;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 2px 4px 0;
+    padding: 2px 8px;
+    border-radius: 999px;
 }
 
-main .content .content-about h1 {
-    font-size: 32px;
-    margin-bottom: 16px;
-}
-
-main .content .content-about p {
-    font-size: 18px;
-}
-
-main .content .content-about img {
-    width: 45%;
-}
-
-main .content .content-blog {
+article#about {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    height: 110vh;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    color: #111522;
-    margin: auto;
-    transition: all 0.2s ease-in-out;
-}
-
-main .content .content-blog .content-blog-symbol {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 2px 4px 8px 2px;
-    border-radius: 16px;
-    padding: 8px;
-}
-
-main .content .content-blog .content-about-symbol p {
-    font-size: 14px;
-}
-
-main .content .content-blog > p {
-    font-weight: 500;
-}
-
-main .content .content-blog .content-blog-description {
-    width: 96%;
-    display: flex;
-    gap: 24px;
-}
-
-main .content .content-blog .content-blog-first {
-    box-shadow: 2px 4px 8px 2px;
-    border-radius: 16px;
-}
-
-main .content .content-blog .content-blog-first:hover {
-    cursor: pointer;
-    margin-left: 4px;
-    box-shadow: 4px 4px 8px 4px rgba(1, 1, 1, 2);
-    border-radius: 16px;
-    color: white;
-}
-
-main .content .content-blog .content-blog-first img {
-    width: 50%;
-}
-
-main .content .content-blog .text {
-    padding: 16px 16px;
-    text-align: justify;
-}
-
-main .content .content-blog .content-blog-second {
-    box-shadow: 2px 4px 8px 2px;
-    border-radius: 16px;
-}
-
-main .content .content-blog .content-blog-second:hover {
-    cursor: pointer;
-    margin-left: 4px;
-    box-shadow: 4px 4px 8px 4px rgba(1, 1, 1, 2);
-    border-radius: 16px;
-    color: white;
-}
-
-main .content .content-blog .content-blog-second img {
-    width: 50%;
-}
-
-main .content .content-blog .content-blog-third {
-    box-shadow: 2px 4px 8px 2px;
-    border-radius: 16px;
-}
-
-main .content .content-blog .content-blog-third:hover {
-    cursor: pointer;
-    margin-left: 4px;
-    box-shadow: 4px 4px 8px 4px rgba(1, 1, 1, 2);
-    border-radius: 16px;
-    color: white;
-}
-
-main .content .content-blog .content-blog-third img {
-    width: 50%;
-}
-
-main aside {
-    position: fixed;
-    inset-block: 0;
-    inset-inline-end: 0;
-}
-
-main aside .social-media {
-    height: 100%;
-    display: flex;
-}
-
-main aside .social-media ul {
-    padding: 1.5rem 1rem;
-    border-radius: 16px;
-    margin: auto 8px;
-    box-shadow: 2px 4px 8px 2px;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-main aside .social-media li {
-    list-style-type: none;
-}
-
-main aside .social-media li a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: black;
-    transition: all 0.1s ease-in-out;
-}
-
-main aside .social-media li a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    padding: 24px;
-    background-color: #111522;
-    border-radius: 16px 16px 0 0;
-    text-align: center;
-}
-
-footer .footer-logo {
-    display: flex;
-    align-items: center;
-    color: white;
-    font-weight: 500;
-    font-size: 24px;
-    margin: 0;
-}
-
-footer .footer-logo .ti-brand-nytimes {
-    font-size: 32px;
-}
-
-footer img {
-    width: 80px;
-    height: auto;
-    border-radius: 50%;
-    border: 2px solid #f1efe6;
-}
-
-footer p {
-    color: white;
-}
-
-/* First Blog*/
-header.navbar-container-blog {
-    display: flex;
-    max-width: 1200px;
-    margin-inline: auto;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
-    border-radius: 16px;
-    background-color: #111522;
-    padding: 12px 12px;
-    position: sticky;
-    top: 16px;
-    box-shadow: 2px 4px 8px 2px;
 }
 
-header .navbar-list-blog ul {
+article#about section {
     display: flex;
-    width: 100%;
-    gap: 16px;
-    padding-left: 0;
+    align-items: center;
+    text-align: left;
     justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+    box-shadow: 2px 4px 8px 2px;
+    border-radius: 8px;
+    margin: 16px 0;
 }
 
-header .navbar-list-blog ul li {
-    list-style: none;
+article#about section h2 {
+    font-size: 32px;
+}
+
+article#about section p {
     font-size: 18px;
+    text-align: justify;
 }
 
-header .navbar-list-blog ul li a {
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
+article#blog {
+    margin: 0 auto;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+article#blog .blog-section {
+    display: flex;
+    gap: 16px;
+}
+
+article#blog section, aside section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+    box-shadow: 2px 4px 8px 2px;
+    border-radius: 8px;
+    margin: 16px 0;
+}
+
+section p {
+    text-align: justify;
+}
+
+aside {
+    width: 70%;
+    margin: 75px auto;
+}
+
+aside section img {
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+aside .social-media ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+aside .social-media ul li a:hover{
     color: white;
+    text-decoration: underline;
 }
 
-header .navbar-list-blog ul li a:hover {
-    font-weight: 600;
-    text-decoration: underline;
+footer.footer-content {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 16px 0;
+}
+
+@media screen and (max-width: 1150px) {
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 300px;
+    }
 }
 
 @media screen and (max-width: 936px) {
-
-    header.navbar-container {
-        justify-content: space-between;
-        width: 96%;
+    header#home .header-intro h1 {
+        font-size: 48px;
     }
 
-    header .navbar-logo {
-        margin-right: 120px;
+    header#home .header-intro p {
+        font-size: 18px;
+        max-width: 500px;
     }
 
-    header button {
-        margin-left: 0;
-        display: none;
-    }
-
-    header .ti-menu-2 {
-        display: flex;
-        margin-left: 120px;
-    }
-
-    main .content .content-about {
-        max-width: 100%;
-    }
-
-    main .content-about .content-about-description {
-        width: 96%;
-    }
-
-    main .content-about .content-about-description-text {
-        padding: 32px 0;
-    }
-
-    main .content-blog .content-blog-description {
-        width: 96%;
-    }
-
-    main .content-blog .content-blog-description .text h3 {
-        text-align: left;
+    header#home .header-intro a {
+        font-size: 14px;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 730px) {
 
-    header.navbar-container {
+    header {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    header#home nav {
+        width: 90%;
         justify-content: space-between;
-        width: 96%;
     }
 
-    header.navbar-container-blog {
-        justify-content: center;
-        width: 96%;
+    header#home .header-nav a {
+        font-size: 14px;
     }
 
-    header .navbar-logo {
-        margin-right: 0;
+    header#home .header-intro h1 {
+        font-size: 32px;
     }
 
-    header .navbar-list {
+    header#home .header-intro p {
+        font-size: 14px;
+        max-width: 500px;
+    }
+
+    header#home .header-intro a {
+        font-size: 12px;
+    }
+
+    header#home .header-intro-button {
+        color: white;
+        background-color: black;
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    article#about section {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    article#about section img {
+        order: -1;
+    }
+
+    article#about {
+        height: auto;
+        margin: 24px 0;
+    }
+    article#blog {
+        height: auto;
+    }
+
+    article#about header p,
+    article#blog header p {
+        font-size: 14px;
+    }
+
+    article#about header h1,
+    article#blog header h1 {
+        font-size: 18px;
+    }
+
+    article#about section h2,
+    article#blog section h2 {
+        font-size: 24px;
+    }
+
+    article#about section p,
+    article#blog section p {
+        font-size: 14px;
+    }
+
+    article#blog .blog-section {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    aside {
+        height: auto;
+    }
+
+    aside p {
+        font-size: 14px;
+    }
+
+    aside section img {
+        width: 130px;
+        height: 130px;
+    }
+
+    footer p {
+        font-size: 14px;
+        padding: 0 16px;
+    }
+
+}
+
+@media screen and (max-width: 535px) {
+
+    header#home nav ul,
+    header#home nav .header-button {
         display: none;
     }
 
-    header button {
-        margin-left: 0;
+    header#home nav {
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+    }
+
+    header#home nav img.icon-menu {
+        display: block;
+    }
+
+    footer p {
         display: none;
     }
 
-    header .ti-menu-2 {
+    /*  Script  */
+    /* Default state: Show icon-logo and icon-menu, hide nav ul and icon-close */
+    header#home nav .icon-logo {
+        display: block;
+    }
+
+    header#home nav .icon-menu {
+        display: block;
+    }
+
+    header#home nav .icon-close,
+    header#home nav ul {
+        display: none;
+    }
+
+    /* State when menu is active */
+    header#home nav .icon-logo.hidden,
+    header#home nav .icon-menu.hidden {
+        display: none;
+    }
+
+    header#home nav .icon-close.show,
+    header#home nav ul.show {
         display: flex;
     }
 
-    main .content .content-home {
-        padding: 0 4px;
-    }
 
-    main .content .content-home h1 {
-        font-size: 34px;
-    }
-
-    main .content .content-home p {
-        font-size: 16px;
-        margin: 16px 0;
-    }
-
-    main .content .content-home button {
-        font-size: 16px;
-    }
-
-    main .content .content-about {
-        margin-top: 8px;
-    }
-
-    main .content .content-about > p {
-        font-weight: 500;
-        font-size: 14px;
-    }
-
-    main .content .content-about h1 {
-        font-size: 22px;
-        text-align: center;
-    }
-
-    main .content .content-about p {
-        font-size: 16px;
-    }
-
-    main .content .content-about .content-about-description{
-        flex-direction: column;
-    }
-
-    main .content .content-about .content-about-description img{
-        order: -1;
-        width: 160px;
-    }
-
-    main .content .content-blog {
-        height: auto;
-        margin: 68px 0;
-    }
-
-    main .content .content-blog .content-blog-description {
-        flex-direction: column;
-    }
-
-    main .content .content-blog .content-blog-description img {
-        width: 160px;
-    }
-
-    main .content .content-blog .content-blog-description h3 {
-        font-size: 18px;
-    }
-
-    main .content .content-blog .content-blog-description p {
-        font-size: 16px;
-    }
-
-    footer {
-        font-size: 14px;
-    }
-
-    footer .footer-logo {
-        font-size: 18px;
-    }
-
-    footer .footer-logo .ti-brand-nytimes {
-        font-size: 18px;
-    }
-
-    footer img {
-        width: 50px;
-    }
 }
